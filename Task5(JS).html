@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="website">Website:</label>
+        <input type="text" id="website" name="website" required><br><br>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" required></textarea><br><br>
+    </form>
+
+    <button id="submitBtn">Submit</button>
+
+    <script>
+        const submitBtn = document.getElementById("submitBtn");
+
+        submitBtn.addEventListener("click", function() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const website = document.getElementById("website").value;
+            const message = document.getElementById("message").value;
+
+            if (name === "" || email === "" || website === "" || message === "") {
+                alert("Please fill in all the fields!");
+            } else {
+                alert("Submitted!");
+            }
+        });
+    </script>
+</body>
+</html>
